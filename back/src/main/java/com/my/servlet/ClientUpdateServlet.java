@@ -35,7 +35,7 @@ public class ClientUpdateServlet extends HttpServlet {
     String clientCellphoneNo = request.getParameter("client_cellphone_no");
     String clientNickname = request.getParameter("client_nickname");
     Client client = new Client();
-    client.setClientId("a11");
+    client.setClientId(clientId);
     client.setClientPwd(clientPwd);
     client.setClientCellphoneNo(clientCellphoneNo);
     client.setClientNickname(clientNickname);

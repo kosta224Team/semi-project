@@ -6,6 +6,13 @@ $(function () {
     $(this).addClass("active"); //클릭된 버튼에 속성(class 추가)
     // console.log($(this).val()); //클릭된 버튼의 value 값  alert 띄우기
     viewStatus = $(this).val(); //클릭된 버튼의 value 값  alert 띄우기
+    if (viewStatus == 1) {
+      alert("최신이다");
+    } else if (viewStatus == 2) {
+      alert("조회수순이다");
+    } else {
+      alert("좋아요순이다");
+    }
     viewDiaryBoard(viewStatus);
   });
   $(".grid-container").on("click", function () {});

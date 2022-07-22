@@ -37,6 +37,8 @@ public class LoginServlet extends HttpServlet {
 
     try {
       Client client = clientRepository.selectClientByIdAndPwd(clientId, clientPwd);
+      // String clientNickname = client.getClientNickname();
+      // System.out.println(clientNickname);
       int clientStatusFlag = client.getClientStatusFlag();
       System.out.println(clientStatusFlag);
       if (clientStatusFlag == 0) {
@@ -46,6 +48,8 @@ public class LoginServlet extends HttpServlet {
         map.put("status", 1);
         map.put("message", "로그인 성공");
         session.setAttribute("login_info", clientId);
+        // session.setAttribute("nickname", clientNickname);
+
         // System.out.print(session.isNew() + "<br>");
         // System.out.print(session.getId() + "<br>");
         // System.out.print(session.getLastAccessedTime() + "<br>");

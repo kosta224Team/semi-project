@@ -12,8 +12,9 @@ $(() => {
       method: "post",
       data: data,
       success: (jsonObj) => {
+        console.log(jsonObj);
         if (jsonObj.status == 1) {
-          location.href = "/front/html/index1.html";
+          location.href = "/front/html/index.html";
         } else {
           alert(jsonObj.message);
         }

@@ -33,7 +33,7 @@ public class ClientInfoServlet extends HttpServlet {
     String clientId = (String) session.getAttribute("login_info");
 
     try {
-      Client client = clientRepository.selectClientById("a11");
+      Client client = clientRepository.selectClientById(clientId);
       map.put("status", 1);
       map.put("message", "회원정보 가져오기 성공");
       map.put("client", client);

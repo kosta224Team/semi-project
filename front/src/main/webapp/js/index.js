@@ -22,11 +22,15 @@ $(function () {
     },
   });
 
-  $(".loginnav").on("click", "a", function () {
-    let url = $(this).attr("href");
-    let title = $(this).html();
-    if (url == "/back/logout") {
-      location.href = "";
-    }
-  });
+  // $(".loginnav").on("click", "a", function () {
+  //   let $newObj = $(".new");
+  //   let url = $(this).attr("href");
+  //   let title = $(this).html();
+  //   $newObj.load(url, function () {
+  //     if (url == "/back/logout") {
+  //       location.href = "";
+  //     }
+  //   });
+  //   return false;
+  // });
 });
